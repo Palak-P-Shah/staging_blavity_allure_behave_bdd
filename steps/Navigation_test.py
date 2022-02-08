@@ -290,7 +290,14 @@ def verify_more_instagram_link():
     assert more_instagram.is_displayed(), "More - Instagram link is not displayed"
     more_instagram.click()
     print("clicked on instagram link")
-    verify_blavity_footer_instagram()
+    time.sleep(2)
+    # switch to the new tab being opened.
+    driver.switch_to.window(driver.window_handles[1])
+    print(driver.current_url)
+    assert "Blavity" in driver.title, "instagram link title is not as expected"
+    WebDriverWait(driver, 40).until(ec.title_contains("Blavity"))
+    driver.close()
+    driver.switch_to.window(driver.window_handles[0])
 
 
 def verify_more_twitter_link():

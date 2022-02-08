@@ -10,10 +10,11 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 options = Options()
+# uncomment below line for local windows test run
 # options.headless = False
 options.headless = True
 options.add_argument('--no-sandbox')
-# change the above two lines for local windows test run
+# comment the above two lines for local windows test run
 options.add_argument("--disable-notifications")
 options.add_argument('--start-maximized')
 # options.add_argument("--headless")
