@@ -284,7 +284,7 @@ def verify_instagram_link():
     # switch to the new tab being opened.
     driver.switch_to.window(driver.window_handles[1])
     print(driver.current_url)
-    WebDriverWait(driver, 40).until(ec.title_contains("BlavityU"))
+    WebDriverWait(driver, 40).until(ec.title_contains("Instagram"))
     if driver.current_url == 'https://www.instagram.com/blavityu/':
         print("instagram link is active")
     driver.close()
