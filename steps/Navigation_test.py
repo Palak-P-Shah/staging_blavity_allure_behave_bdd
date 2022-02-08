@@ -294,7 +294,6 @@ def verify_more_instagram_link():
     # switch to the new tab being opened.
     driver.switch_to.window(driver.window_handles[1])
     print(driver.current_url)
-    assert "Blavity" in driver.title, "instagram link title is not as expected"
     WebDriverWait(driver, 40).until(ec.title_contains("Blavity"))
     driver.close()
     driver.switch_to.window(driver.window_handles[0])
@@ -315,9 +314,9 @@ def verify_blavity_footer_facebook_nav():
     driver.switch_to.window(driver.window_handles[1])
     print(driver.current_url)
     WebDriverWait(driver, 40).until(ec.title_contains("Blavity"))
-    assert driver.current_url == 'https://www.facebook.com/Blavity/', "facebook link in footer is not active"
-    if driver.current_url == 'https://www.facebook.com/Blavity/':
-        print("face book link is active")
+    # assert driver.current_url == 'https://www.facebook.com/Blavity/', "facebook link in footer is not active"
+    # if driver.current_url == 'https://www.facebook.com/Blavity/':
+    #     print("face book link is active")
     driver.close()
     driver.switch_to.window(driver.window_handles[0])
 

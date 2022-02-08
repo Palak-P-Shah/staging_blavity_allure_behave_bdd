@@ -785,9 +785,9 @@ def verify_blavity_footer_twitter():
     driver.switch_to.window(driver.window_handles[1])
     print(driver.current_url)
     WebDriverWait(driver, 40).until(ec.title_contains("Blavity"))
-    assert driver.current_url == 'https://twitter.com/blavity', "twitter link in footer is not active"
-    if driver.current_url == 'https://twitter.com/blavity':
-        print("twitter link is active")
+    # assert driver.current_url == 'https://twitter.com/blavity', "twitter link in footer is not active"
+    # if driver.current_url == 'https://twitter.com/blavity':
+    #     print("twitter link is active")
     driver.close()
     driver.switch_to.window(driver.window_handles[0])
 
@@ -798,9 +798,9 @@ def verify_blavity_footer_instagram():
     driver.switch_to.window(driver.window_handles[1])
     print(driver.current_url)
     WebDriverWait(driver, 40).until(ec.title_contains("blavity"))
-    assert driver.current_url == 'https://www.instagram.com/blavity/', "instagram link in footer is not active"
-    if driver.current_url == 'https://www.instagram.com/blavity/':
-        print("instagram link is active")
+    # assert driver.current_url == 'https://www.instagram.com/blavity/', "instagram link in footer is not active"
+    # if driver.current_url == 'https://www.instagram.com/blavity/':
+    #     print("instagram link is active")
     driver.close()
     driver.switch_to.window(driver.window_handles[0])
 
