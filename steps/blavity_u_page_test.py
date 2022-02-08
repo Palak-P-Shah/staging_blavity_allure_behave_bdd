@@ -504,7 +504,7 @@ def verify_instagram_img():
     instagram_img_link.click()
     driver.switch_to.window(driver.window_handles[1])
     WebDriverWait(driver, 40).until(ec.title_contains("Instagram"))
-    assert "Blavity" in driver.title
+    assert "Instagram" in driver.title, "title does not contain Instagram"
     time.sleep(2)
     driver.close()
     driver.switch_to.window(driver.window_handles[0])
