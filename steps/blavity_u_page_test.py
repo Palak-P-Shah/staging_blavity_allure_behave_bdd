@@ -488,6 +488,8 @@ def verify_spotted_on_the_yard_section():
     print(len(story_class_name), "story board slick track is present")
     assert len(story_class_name) > 0, "stories in yard section are not displayed"
     slick_dots = driver.find_element(By.XPATH, "(//ul[@role='tablist'])[1]")
+    actions = ActionChains(driver)
+    actions.move_to_element(slick_dots).perform()
     assert slick_dots.is_displayed(), "slick dots in yard section is not displayed"
     if slick_dots.is_displayed():
         print("slick dots are displayed")
