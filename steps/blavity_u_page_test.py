@@ -503,7 +503,7 @@ def verify_instagram_img():
     assert instagram_img_link.is_displayed(), "instagram link is not displayed"
     instagram_img_link.click()
     driver.switch_to.window(driver.window_handles[1])
-    WebDriverWait(driver, 40).until(ec.title_contains("Blavity"))
+    WebDriverWait(driver, 40).until(ec.title_contains("Instagram"))
     assert "Blavity" in driver.title
     time.sleep(2)
     driver.close()
