@@ -122,7 +122,7 @@ def verify_each_story(page_value):
         if page_value == "Op-Eds":
             page_value = "Opinion"
         print(page_value, " is the page")
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 40).until(
             ec.presence_of_element_located((By.XPATH, "//h1[normalize-space()='"+page_value+"']")))
         assert_test = driver.find_element(By.XPATH, "//h1[normalize-space()='"+page_value+"']")
         assert assert_test.is_displayed(), "header is not present of the " + page_value + " page"
