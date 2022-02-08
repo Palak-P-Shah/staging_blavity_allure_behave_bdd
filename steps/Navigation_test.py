@@ -294,7 +294,7 @@ def verify_more_instagram_link():
     # switch to the new tab being opened.
     driver.switch_to.window(driver.window_handles[1])
     print(driver.current_url)
-    WebDriverWait(driver, 40).until(ec.title_contains("Blavity"))
+    WebDriverWait(driver, 40).until(ec.title_contains("Instagram"))
     driver.close()
     driver.switch_to.window(driver.window_handles[0])
 
